@@ -51,11 +51,25 @@
         font-size: 15px;
         border-radius: 10px;
         float: right;
-        margin-top: -30px;
+        margin-top: -40px;
+        margin-right: -10px;
       }
       .greetings {
         color: white;
         font-weight: 400;
+      }
+      .Balance {
+        width: 100%;
+        display: flex;
+      }
+      .Available {
+        width: 50%;
+      }
+      .Cashapp {
+        width: 20%;
+      }
+      .Cashapp img {
+        width: 100%;
       }
     </style>
   </head>
@@ -73,7 +87,7 @@
       <ul>
         <li><a href="#">Account </a></li>
         <li><a href="#">Security&Privacy</a></li>
-        <li><a href="#">Stock</a></li>
+        <li><a href="#">Stocks</a></li>
         <li>
           <a href="mailto:cashmanagement@gmail.com"> Contact an advocate</a>
         </li>
@@ -84,7 +98,20 @@
         <li><a href="#">Authentication</a></li> -->
       </ul>
     </nav>
-    <section></section>
+    <section>
+      <h1>Available Balance</h1>
+      <hr />
+      <div class="Balance">
+        <div class="Available">
+          <h5>TOTAL CHECKING 5671...</h5>
+          <h3>$70,904,456.09</h3>
+        </div>
+        <div class="Cashapp">
+          <img src="./assets/cashlogo.png" />
+          <button>Transfer to cash app &longrightarrow;</button>
+        </div>
+      </div>
+    </section>
     <script></script>
   </body>
 </html>
