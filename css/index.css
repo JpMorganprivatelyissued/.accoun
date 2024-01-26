@@ -11,15 +11,14 @@ section {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 13px;
-  margin-bottom: 400px;
+  margin-bottom: 200px;
 }
 
 .logo {
   width: 300px;
   margin: 0%auto;
-
   margin-bottom: 50px;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 .logo img {
   width: 100%;
