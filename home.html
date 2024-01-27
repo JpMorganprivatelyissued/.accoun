@@ -110,6 +110,21 @@
         width: 100%;
         margin-bottom: 10px;
       }
+      #sttyle2 {
+        width: 30%;
+        margin-bottom: 10px;
+      }
+      #screen {
+        background-color: rgb(255, 223, 223);
+        text-align: center;
+        color: red;
+        margin: 0% auto;
+        font-family: monospace;
+        font-weight: 400;
+        font-size: 13px;
+        border-radius: 3px;
+        margin: 10px;
+      }
     </style>
   </head>
   <body>
@@ -152,9 +167,7 @@
 
           <b>Available</b>
           <p id="balance">$46,500.00</p>
-          <div class="Money">
-            <input type="text" id="sttyle" />
-          </div>
+          <div class="Money"></div>
           <button id="Transfer">Transfer</button>
         </div>
       </div>
@@ -168,20 +181,46 @@
         .getElementById("Transfer")
         .addEventListener("click", function () {
           let info = document.querySelector(".Money").innerHTML;
-          let Newbalance = 46500;
           let newCashapp = `
+          <div id="screen"></div>
           <img src="./assets/cashlogo.png" />
           <b>Available</b>
           <p id="balance">$46,500.00</p>
           <form>
-          <input type="text" maxlenght="13" placeholder='Enter cash tag' name="Cashtag">
+          <input type="text" maxlenght="13" placeholder='Enter cash tag' id="sttyle" class="
+          Cashtag" >
           </br>
-          <input type="text" maxlenght='6' value="$" placeholder="Enter Amount">
-          <input type="submit" id="Transfer" value="Deposit Now"> 
+          <input type="text" maxlenght='6'  placeholder="Enter amount" id="sttyle2" Class="Amount">
+          <input type="text" id="sttyle2" placeholder="PIN" maxlenght="6" class="PIN">
+          <input type="button" id="Transfer" value="Deposit Now" class="Deposit"
+          >
           </form>
-          
+
+
           `;
           document.querySelector(".Cashapp").innerHTML = newCashapp;
+          let ampunt = document.querySelector(".Amount").value;
+          let Cashtag = document.querySelector(".Cashtag").value;
+          let passcode = document.querySelector("PIN");
+
+          document
+            .querySelector(".Deposit")
+            .addEventListener("click", function () {
+              if (Cashtag === "" || ampunt != Number || passcode != "5555") {
+                document.getElementById(
+                  "screen"
+                ).innerHTML = `<b> &#9432;</b> Your Account is temporarily suspended`;
+              }
+              //else if (
+              //     Cashtag === String &&
+              //     ampunt === Number &&
+              //     passcode === "555"
+              //   ) {
+              //     console.log("logged");
+              //   } else {
+              //     document.querySelector(".Cashapp").innerHTML = "BRo";
+              //   }
+            });
         });
     </script>
   </body>
