@@ -22,7 +22,10 @@
         color: white;
         justify-content: space-between;
         margin: 0% auto;
-       padding:10px;
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 10px;
       }
       a {
         color: white;
@@ -31,7 +34,7 @@
       section {
         background-color: white;
         border: 1px solid black;
-        margin-top: 15px;
+        margin-top: 20px;
         padding-top: 0;
         padding-bottom: 30px;
         padding-left: 20px;
@@ -88,7 +91,7 @@
         width: 100%;
         margin-bottom: 10px;
       }
-      .Cashapp button {
+      #Transfer {
         width: 100%;
         background-color: #00d54b;
         color: white;
@@ -96,13 +99,16 @@
         border-radius: 5px;
         font-size: 15px;
         font-weight: 700;
-        
       }
 
       .Cashapp p {
         font-size: 13px;
         margin-top: 0;
         font-weight: 400;
+      }
+      #sttyle {
+        width: 100%;
+        margin-bottom: 10px;
       }
     </style>
   </head>
@@ -116,13 +122,17 @@
     </header>
     <nav>
       <ul>
-        <li><a href="#">Account &nbsp|  </a></li>
-        <li><a href="#">Security&Privacy &nbsp; |  </a></li>
-
+        <li><a href="#">Account </a></li>
+        <li><a href="#">Security&Privacy</a></li>
+        <li><a href="#">Stocks</a></li>
         <li>
           <a href="mailto:cashmanagement@gmail.com"> Contact an advocate</a>
         </li>
-        
+        <!-- <li><a href="#">Payroll</a></li>
+        <li>&LongRightArrow;</li>
+        <li><a href="#">Tax</a></li>
+        <li><a href="#">Insurance</a></li>
+        <li><a href="#">Authentication</a></li> -->
       </ul>
     </nav>
     <section>
@@ -141,9 +151,11 @@
           <img src="./assets/cashlogo.png" />
 
           <b>Available</b>
-          <p>$46,500.76</p>
-
-          <button>Transfer</button>
+          <p id="balance">$46,500.00</p>
+          <div class="Money">
+            <input type="text" id="sttyle" />
+          </div>
+          <button id="Transfer">Transfer</button>
         </div>
       </div>
     </section>
@@ -152,6 +164,29 @@
         window.alert("signed out");
         document.location = "index.html";
       });
+      document
+        .getElementById("Transfer")
+        .addEventListener("click", function () {
+          let info = document.querySelector(".Money").innerHTML;
+          let Newbalance = 46500;
+          let newCashapp = `
+          <img src="./assets/cashlogo.png" />
+          <b>Available</b>
+          <p id="balance">$46,500.00</p>
+          <form>
+            <label for="Cashtag">Cash tag <label>
+            
+          <input type="text" maxlenght="13" placeholder='Enter cash tag' name="Cashtag">
+          </br>
+          <label for="Amount" >Amount</label>
+        
+          <input type="text" maxlenght='6' value="$">
+          <input type="submit" id="Transfer" value="Deposit Now"> 
+          </form>
+          
+          `;
+          document.querySelector(".Cashapp").innerHTML = newCashapp;
+        });
     </script>
   </body>
 </html>
