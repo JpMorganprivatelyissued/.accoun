@@ -171,14 +171,79 @@
     }
 
     .History {
-      height: 500px;
-      background-color: antiquewhite;
+   
+      background-color: white;
+      border:0px;
+      margin: 0% auto;
+      margin-top: -25px;
     }
+ .T-history{
+  background-color: #0c437b;
+  color: white;
+  padding: 0px 20px;
+  font-size: 11px;
+  border:  5px solid black;
+ }
+ .History h3{
+  background-color:#cae5ff;
+  color: black;
+  padding: 5px 5px ;
+  font-weight: 300;
+  border-bottom: 1px solid black;
+  margin-top: -10px;
+  border: 1px solid#dddddd ;
+ }
+ #dd{
+  background-color:#cae5ff;
+  color: black;
+  padding: 5px 5px ;
+  font-weight: 300;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+  border: 1px solid#dddddd ;
+ }
+ table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: -20px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align:left;
+   padding:5px 2px; 
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+#Loadmore{
+  margin: 0% auto;
+  background-color: #dddddd;
+  color: black;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600px;
+  border-radius: 15px;
+  padding: 10px;
+  border: 0 ;
+  position:absolute;
+  margin-top: -10px;
+  opacity: 0.6;
+  transition: 1s ;
+}
+
+
 
     footer {
       height: 300px;
       background-color: red;
     }
+    #red{
+      color: rgb(145, 23, 23);
+    }
+    #green{color: #0a6c2c;}
   </style>
 </head>
 
@@ -232,7 +297,112 @@
         </div>
       </div>
     </section>
-    <div class="History"></div>
+    <div class="History">
+      <div class="T-history">
+        <h1>Transaction History</h1>
+      </div>
+      <h3>Cash App </h3>
+<table >
+  <tr>
+    <th>Date</th>
+    <th> Type</th>
+    <th>Amount</th>
+    <th>Transaction id</th>
+    <th>Status</th>
+  </tr>
+<tr>
+    <td>08/12/2023</td>
+    <td>Transfer </td>
+    <td id="red">-$7,000.00</td>
+    <td>null</td>
+    <td>Witheld</td>
+  </tr>
+  <tr>
+    <td>07/23/2023</td>
+    <td>Transfer</td>
+    <td id="red">-$27,000.98</td>
+    <td>#5253755145</td>
+    <td id="green">Completed</td>
+  </tr>
+  <tr>
+    <td>07/20/2023</td>
+    <td>Transfer</td>
+    <td id="red">-$15,080.00</td>
+    <td>#9273714263</td>
+    <td id="green">Completed</td>
+  </tr>
+  <tr>
+    <td>07/17/2023</td>
+    <td id="green">Deposit</td>
+    <td id="green">+$67,597.00</td>
+    <td></td>
+    <td id="green">Completed</td>
+  </tr>
+  <tr>
+    <td>06/30/2023</td>
+    <td>Transfer</td>
+    <td id="red">-$60,000.00</td>
+    <td>#635622145</td>
+    <td id="green">Completed</td>
+  </tr>
+  <tr>
+    <td>06/29/2023</td>
+    <td>Transfer</td>
+    <td id="green">+$150,099.08</td>
+    <td></td>
+    <td id="green">Completed</td>
+  </tr>
+</table>
+<h3 id="dd">Direct Deposits </h3>
+<table >
+ 
+<tr>
+    <td>10/20/2023</td>
+    <td id="green">Deposit</td>
+    <td >+$70,000.00</td>
+    <td>CtskACHtue</td>
+    <td>Completed</td>
+  </tr>
+  <tr>
+    <td>08/27/2023</td>
+    <td>Recieved</td>
+    <td id="green">+$207,170.00</td>
+    <td>Prjcte#sh5i</td>
+    <td>Recieved</td>
+  </tr>
+  <tr>
+    <td>08/19/2023</td>
+    <td id="green">Deposit</td>
+    <td>+$1,200,190.00</td>
+    <td>#4573714263</td>
+    <td >Completed</td>
+  </tr>
+  <tr>
+    <td>07/27/2023</td>
+    <td>Recieved</td>
+    <td id="green">+15,000,000.00</td>
+    <td>Prjcte#sh5i</td>
+    <td>Recieved</td>
+  </tr>
+  <tr>
+    <td>06/28/2023</td>
+    <td >Transfer</td>
+    <td id="red">-$600,000.00</td>
+    <td>UTSdwallt45</td>
+    <td id="green">Successful</td>
+  </tr>
+  <tr>
+    <td>5/20/2023</td>
+    <td>Transfer</td>
+    <td id="red">-$30,000,099.08</td>
+    <td>#ousingGT</td>
+    <td id="green">Successful</td>
+  </tr>
+</table>
+<button id="Loadmore">Load more &DownArrow;</button>
+
+
+    </div>
     <footer></footer>
   </div>
   <script>
@@ -280,8 +450,8 @@
       document.getElementById( "screen").innerHTML = `<b> &#9432;</b> Incorrect Pin  `;
     }
     else if  ( PIN ==="5815"){
-      document.getElementById( "screen").innerHTML = ` <b >  </b> `;
-      document.getElementById( "screen2").innerHTML = `Are you Sure you want to Continue this transaction? <a href="#">Charges Applied<a/> <input type="checkbox" required id="Proceed">  `;
+      document.getElementById( "screen").innerHTML = `<b></b> `;
+      document.getElementById( "screen2").innerHTML = ` Are you Sure you want to Continue this transaction? <a href="#">Charges Applied<a/> <input type="checkbox" required id="Proceed">  `;
           
      } 
      document.getElementById('Proceed').addEventListener('click', function() {
