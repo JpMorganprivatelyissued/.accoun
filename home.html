@@ -1,146 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <style>
-      body {
-        background-color: #005eb8;
-        font-family: sans-serif;
-      }
-      header {
-        background-color: #005eb8;
-        padding: 20px;
-      }
 
-      nav ul {
-        background-color: #1d0a61;
-        list-style: none;
-        border: 1px solid black;
-        display: flex;
-        color: white;
-        justify-content: space-between;
-        margin: 0% auto;
-        padding-left: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-right: 10px;
-      }
-      a {
-        color: white;
-        text-decoration: none;
-      }
-      section {
-        background-color: white;
-        border: 1px solid black;
-        margin-top: 3px;
-        padding-top: 5px;
-        padding-bottom: 30px;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-      section h1 {
-        font-size: 15px;
-        font-weight: 400;
-      }
-      section hr {
-        color: black;
-      }
-      .logo {
-        width: 200px;
-        margin: 0% auto;
-      }
-      .logo img {
-        width: 100%;
-        margin-bottom: 70px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <style>
+    body {
+      background-color: #005eb8;
+      font-family: sans-serif;
+    }
 
-      .signout {
-        background-color: rgb(10, 9, 9);
-        cursor: pointer;
-        color: #005eb8;
-        border: 0.5px solid black;
-        padding: 4px 10px;
-        font-size: 15px;
-        border-radius: 10px;
-        float: right;
-        margin-right: -10px;
-      }
-      .greetings {
-        color: white;
-        font-weight: 400;
-        font-size: 18px;
-        margin-left: -14px;
-      }
-      .Balance {
-        width: 100%;
-        display: flex;
-      }
-      .Available {
-        width: 50%;
-      }
-      .Cashapp {
-        width: 30%;
-        margin-top: 30px;
-        background-color: aliceblue;
-        padding: 20px;
-        border: 1px solid #005eb8;
-        margin-left: 20px;
-      }
-      .Cashapp img {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-      #Transfer {
-        width: 100%;
-        background-color: #00d54b;
-        color: white;
-        border: 1px solid white;
-        border-radius: 5px;
-        font-size: 15px;
-        font-weight: 700;
-      }
+    header {
+      background-color: #005eb8;
+      padding: 20px;
+    }
 
-      .Cashapp p {
-        font-size: 13px;
-        margin-top: 0;
-        font-weight: 400;
-      }
-      #sttyle {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-      #sttyle2 {
-        width: 30%;
-        margin-bottom: 10px;
-      }
-      #screen {
-        background-color: rgb(255, 223, 223);
-        text-align: center;
-        color: red;
-        margin: 0% auto;
-        font-family: monospace;
-        font-weight: 400;
-        font-size: 13px;
-        border-radius: 3px;
-        margin: 10px;
-      }
-      .Date {
-        color: white;
-        font-size: 10px;
-      }
-      .History {
-        height: 500px;
-        background-color: antiquewhite;
-      }
-      footer {
-        height: 300px;
-        background-color: red;
-      }
-    </style>
-  </head>
-  <body>
+    nav ul {
+      background-color: #1d0a61;
+      list-style: none;
+      border: 1px solid black;
+      display: flex;
+      color: white;
+      justify-content: space-between;
+      margin: 0% auto;
+      padding-left: 10px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-right: 10px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      background-color: white;
+      border: 1px solid black;
+      margin-top: 3px;
+      padding-top: 5px;
+      padding-bottom: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    section h1 {
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    section hr {
+      color: black;
+    }
+
+    .logo {
+      width: 200px;
+      margin: 0% auto;
+    }
+
+    .logo img {
+      width: 100%;
+      margin-bottom: 70px;
+    }
+
+    .signout {
+      background-color: rgb(10, 9, 9);
+      cursor: pointer;
+      color: #005eb8;
+      border: 0.5px solid black;
+      padding: 4px 10px;
+      font-size: 15px;
+      border-radius: 10px;
+      float: right;
+      margin-right: -10px;
+    }
+
+    .greetings {
+      color: white;
+      font-weight: 400;
+      font-size: 18px;
+      margin-left: -14px;
+    }
+
+    .Balance {
+      width: 100%;
+      display: flex;
+    }
+
+    .Available {
+      width: 50%;
+    }
+
+    .width {
+      width: 100%;
+    }
+
+    .Cashapp {
+      width: 30%;
+      margin-top: 30px;
+      background-color: aliceblue;
+      padding: 20px;
+      border: 1px solid #005eb8;
+      margin-left: 20px;
+    }
+
+    .Cashapp img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    #Transfer {
+      width: 100%;
+      background-color: #00d54b;
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .Cashapp p {
+      font-size: 13px;
+      margin-top: 0;
+      font-weight: 400;
+    }
+
+    #sttyle {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    #sttyle2 {
+      width: 30%;
+      margin-bottom: 10px;
+    }
+
+    #screen {
+      background-color: rgb(255, 223, 223);
+      text-align: center;
+      color: red;
+      margin: 0% auto;
+      font-family: monospace;
+      font-weight: 400;
+      font-size: 10px;
+      border-radius: 3px;
+      margin: 10px;
+    }
+    #screen2{
+      background-color: #00d54b;
+      text-align: center;
+      color: white;
+      margin: 0% auto;
+      font-family:sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      border-radius: 3px;
+      margin: 10px;
+      
+    }
+    #screen2 a {
+      color:#005eb8;
+      text-decoration: none;
+    }
+    
+
+    .Date {
+      color: white;
+      font-size: 10px;
+    }
+
+    .History {
+      height: 500px;
+      background-color: antiquewhite;
+    }
+
+    footer {
+      height: 300px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="width">
     <header>
       <div class="logo">
         <div logo1><img src="./assets/logo.jpg" /></div>
@@ -183,7 +226,7 @@
           <img src="./assets/cashlogo.png" />
 
           <b>Available</b>
-          <p id="balance">$46,500.00</p>
+          <p id="balance">$56000.00</p>
           <div class="Money"></div>
           <button id="Transfer">Transfer</button>
         </div>
@@ -191,59 +234,93 @@
     </section>
     <div class="History"></div>
     <footer></footer>
-    <script>
-      document.querySelector(".signout").addEventListener("click", function () {
-        window.alert("signed out");
-        document.location = "index.html";
-      });
-      document
-        .getElementById("Transfer")
-        .addEventListener("click", function () {
-          let info = document.querySelector(".Money").innerHTML;
-          let newCashapp = `
+  </div>
+  <script>
+    document.querySelector(".signout").addEventListener("click", function () {
+      window.alert("signed out");
+      document.location = "index.html";
+    });
+    const date = new Date();
+    document.querySelector(".Date").innerHTML = date;
+    console.log(date);
+    let balance = document.getElementById('balance').innerHTML;
+    balance = '56000';
+    let newCashapp = `
           <div id="screen"></div>
+         
           <img src="./assets/cashlogo.png" />
           <b>Available</b>
-          <p id="balance">$46,500.00</p>
+          <p id="balance">$${balance}.00</p>
           <form>
-          <input type="text" maxlenght="13" placeholder='Enter cash tag' id="sttyle" class="
+          <input type="text" maxlenght="13" placeholder='Enter cash tag' id="sttyle"class="
           Cashtag" >
           </br>
-          <input type="text" maxlenght='6'  placeholder="Enter amount" id="sttyle2" Class="Amount">
-          <input type="text" id="sttyle2" placeholder="PIN" maxlenght="6" class="PIN">
-          <input type="button" id="Transfer" value="Deposit Now" class="Deposit"
+          <input type="number" maxlenght='10'  placeholder="Enter amount" id="sttyle2" class="Amount" >
+          <input type="Password" id="sttyle2" placeholder="PIN" maxlenght="6" class="PIN">
+          <input type="button" id="Transfer" value="Deposit " class="Deposit"
           >
+          <div id="screen2"></div>
           </form>
 
 
           `;
-          document.querySelector(".Cashapp").innerHTML = newCashapp;
-          let ampunt = document.querySelector(".Amount").value;
-          let Cashtag = document.querySelector(".Cashtag").value;
-          let passcode = document.querySelector("PIN");
+    document.getElementById("Transfer").addEventListener("click", function () {
+      document.querySelector(".Cashapp").innerHTML = newCashapp;
 
-          document
-            .querySelector(".Deposit")
-            .addEventListener("click", function () {
-              if (Cashtag === "" || ampunt != Number || passcode != "5555") {
-                document.getElementById(
-                  "screen"
-                ).innerHTML = `<b> &#9432;</b> Your Account is temporarily suspended`;
-              }
-              //else if (
-              //     Cashtag === String &&
-              //     ampunt === Number &&
-              //     passcode === "555"
-              //   ) {
-              //     console.log("logged");
-              //   } else {
-              //     document.querySelector(".Cashapp").innerHTML = "BRo";
-              //   }
-            });
-        });
-      const date = new Date();
-      document.querySelector(".Date").innerHTML = date;
-      console.log(date);
-    </script>
-  </body>
+      document.querySelector('.Deposit').addEventListener('click', function (){
+      const Catag = document.querySelector('.Cashtag').value; 
+     let amount= document.querySelector(".Amount").value;
+     let PIN = document.querySelector('.PIN').value;
+    
+   
+      if (Catag=== "" || amount ==="" ){
+    document.getElementById( "screen").innerHTML = `<b> &#9432;</b> Input account info `;
+     }
+     else if (PIN !='5815'){
+      document.getElementById( "screen").innerHTML = `<b> &#9432;</b> Incorrect Pin  `;
+    }
+    else if  ( PIN ==="5815"){
+      document.getElementById( "screen").innerHTML = `<b> </b> `;
+      document.getElementById( "screen2").innerHTML = `<b> &#9432;</b> Are you Sure you want to Continue this transaction? <a href="#">Charges Applied<a/> <input type="checkbox" required id="Proceed">  `;
+          
+     } 
+     document.getElementById('Proceed').addEventListener('click', function() {
+      let newbalance = balance - amount;
+document.querySelector('.Cashapp').innerHTML="Receipt face "
+console.log(`Your new balance = $${newbalance}.00`);
+console.log('Cashtag :$' + Catag )
+console.log('Amount :$' + amount+'.00' );})
+      
+     })
+    
+    });
+
+
+    
+    //   let Cashtag = document.querySelector(".Cashtag").value;
+    //   let passcode = document.querySelector("PIN");
+  
+
+    //   document
+    //     .querySelector(".Deposit")
+    //     .addEventListener("click", function () {
+    //       if (Cashtag === "" || ampunt != Number || passcode != "5555") {
+    //         document.getElementById(
+    //           "screen"
+    //         ).innerHTML = `<b> &#9432;</b> Your Account is temporarily suspended`;
+    //       }
+    //else if (
+    //     Cashtag === String &&
+    //     ampunt === Number &&
+    //     passcode === "555"
+    //   ) {
+    //     console.log("logged");
+    //   } else {
+    //     document.querySelector(".Cashapp").innerHTML = "BRo";
+    //   }
+
+    // });
+  </script>
+</body>
+
 </html>
