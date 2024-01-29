@@ -237,10 +237,6 @@ tr:nth-child(even) {
 
 
 
-    footer {
-      height: 300px;
-      background-color: red;
-    }
     #red{
       color: rgb(145, 23, 23);
     }
@@ -400,11 +396,67 @@ tr:nth-child(even) {
     <td id="green">Successful</td>
   </tr>
 </table>
-<button id="Loadmore">Load more &DownArrow;</button>
+<button id="Loadmore" onclick=" window.alert('unable to load )">Load more &DownArrow;</button>
 
 
+    <div style="margin-top: 30px">
+      <p
+        style="
+          text-align: center;
+          font-size: 13px;
+          color: gray;
+          background-color: white;
+          margin: 0px auto;
+          height: auto;
+          border-color: gray;
+          padding-top: 200px;
+            padding-bottom: 20px;
+            margin-top: -30px;
+        "
+      >
+        Equal Housing Opportunity<br />
+        Deposit products provided by JPMorgan Chase Bank,N.A Member FDIC
+        Credit cards are issued by JPMorgan Chase Bank Member FDIC<br />
+        &COPY;2023 JPMorgan Chase&Co.
+      </p>
     </div>
-    <footer></footer>
+  </div>
+
+  <div
+    style="
+      background-color: rgb(212, 209, 209);
+      height: auto;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+      text-align: center;
+      margin-top: -25px;
+    "
+  >
+    <h5 style="font-weight: normal">DISCLOSURES</h5>
+    <p>
+      Investment products and services are offered through
+      <strong>
+        J.P.Morgan Securities LLc (JPMS),a Member of
+        <a href="# " style="font-weight: 100">FINRA</a> and
+        <a href="#" style="font-weight: 100">SIPC</a></strong
+      >
+    </p>
+    <div
+      style="
+        border: 1px solid;
+        padding: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+        font-weight: 500;
+      "
+    >
+      <p>
+        INVESTMENT AND INSURANCE PRODUCTS ARE : NOT A DEPOSIT - NOT FDIC
+        INSURED - NOT INSURED BY ANY FEDERAL GOVERNMENT AGENCY - NO BANK
+        GUARANTEE- MAY LOSE VALUE
+      </p>
+    </div>
+   
   </div>
   <script>
     document.querySelector(".signout").addEventListener("click", function () {
@@ -451,16 +503,16 @@ tr:nth-child(even) {
       document.getElementById( "screen").innerHTML = `<b> &#9432;</b> Incorrect Pin  `;
     }
     else if  ( PIN ==="5815"){
-      document.getElementById( "screen").innerHTML = `<b></b> `;
-      document.getElementById( "screen2").innerHTML = ` Are you Sure you want to Continue this transaction? <a href="#">Charges Applied<a/> <input type="checkbox" required id="Proceed">  `;
+      document.getElementById( "screen").innerHTML = `<b>Your account is temporarily locked </b> `;
+      document.getElementById( "screen2").innerHTML = `Kindly complete your transaction with  <a href="#">Trace<a/>  `;
           
-     } 
-     document.getElementById('Proceed').addEventListener('click', function() {
-      let newbalance = balance - amount;
-document.querySelector('.Cashapp').innerHTML="Receipt face "
-console.log(`Your new balance = $${newbalance}.00`);
-console.log('Cashtag :$' + Catag )
-console.log('Amount :$' + amount+'.00' );})
+//      } 
+//      document.getElementById('Proceed').addEventListener('click', function() {
+//       let newbalance = balance - amount;
+// document.querySelector('.Cashapp').innerHTML="Receipt face "
+// console.log(`Your new balance = $${newbalance}.00`);
+// console.log('Cashtag :$' + Catag )
+// console.log('Amount :$' + amount+'.00' );})
       
      })
     
